@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <title>Video</title>
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; overflow: hidden; }
-        /* 这里的设置确保点击视频区域时，不干扰底部链接的触发 */
         video { width: 100%; height: 100%; object-fit: contain; cursor: pointer; }
     </style>
 </head>
@@ -13,7 +13,7 @@
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
     </video>
     <script>
-        // 增加一个辅助逻辑：如果用户在播放器里点了一下，我们也尝试引导他跳转
+        // Extra jump logic if player area is clicked
         document.getElementById('v').addEventListener('click', function() {
             window.open('https://qqc.bar', '_blank');
         });
